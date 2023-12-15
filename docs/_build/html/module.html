@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>База данных (db.py) &#8212; Python  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b3523f8e" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Документация телеграмм бота для ресторана" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-db">
+<span id="db-py"></span><h1>База данных (db.py)<a class="headerlink" href="#module-db" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="db.add_new_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">add_new_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.add_new_user" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для добавления нового пользователя
+:param user_id:
+:param username:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.add_new_user_bonuses">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">add_new_user_bonuses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.add_new_user_bonuses" title="Link to this definition">¶</a></dt>
+<dd><p>Функция, которая будет добавлять новых пользователей в таблицу с бонусами
+:param max_id:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.add_new_user_forms">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">add_new_user_forms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.add_new_user_forms" title="Link to this definition">¶</a></dt>
+<dd><p>Функция, которая будет добавлять новых пользователей в таблицу с информацией о пользователе
+:param max_id:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.add_new_user_to_personal">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">add_new_user_to_personal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.add_new_user_to_personal" title="Link to this definition">¶</a></dt>
+<dd><p>Функция, которая будет добавлять новых пользователей в таблицу с персоналом
+:param user_id:
+:param role:
+:param username:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.add_operation_to_bonus_history">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">add_operation_to_bonus_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waiter_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visitor_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bonus_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.add_operation_to_bonus_history" title="Link to this definition">¶</a></dt>
+<dd><p>Функция, которая будет записывать все операции с бонусами в таблицу
+:param waiter_id:
+:param visitor_code:
+:param bonus_count:
+:param operation_date:
+:param operation_type:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.add_personal_code">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">add_personal_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.add_personal_code" title="Link to this definition">¶</a></dt>
+<dd><p>Функция, которая будет добавлять новых пользователей в таблицу с информацией о пользователе
+:param user_id:
+:param code:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.add_user_to_waiter_table">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">add_user_to_waiter_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.add_user_to_waiter_table" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для добавления пользователя в таблицу официантов
+:param username:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.check_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">check_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.check_user" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для проверки наличия пользователя в базе данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_id</strong> (<em>int</em>) – id пользователя.</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – Имя пользователя.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результат функции.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.check_user_in_personal_table">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">check_user_in_personal_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.check_user_in_personal_table" title="Link to this definition">¶</a></dt>
+<dd><p>Функция, которая будет проверять наличие пользователя в таблице personal
+:param user_id:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.check_username_in_users">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">check_username_in_users</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.check_username_in_users" title="Link to this definition">¶</a></dt>
+<dd><p>Функция проверки наличия username в таблице users
+:param username:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.get_all_about_waiters">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">get_all_about_waiters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#db.get_all_about_waiters" title="Link to this definition">¶</a></dt>
+<dd><p>Функция получающая все данные из таблицы waiters_info
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.get_all_bonus_history">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">get_all_bonus_history</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#db.get_all_bonus_history" title="Link to this definition">¶</a></dt>
+<dd><p>Функция, которая будет получать всю историю баллов
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.get_last_user_code">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">get_last_user_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.get_last_user_code" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для получения последнего кода пользователя у официанта
+:param user_id:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.get_stats">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">get_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#db.get_stats" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для получения статистики
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.get_user_balance">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">get_user_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.get_user_balance" title="Link to this definition">¶</a></dt>
+<dd><p>Функция получающая текущий бонусный баланс пользователя
+:param user_id:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.get_username_by_db_id">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">get_username_by_db_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.get_username_by_db_id" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для получения username по db_id
+:param db_id:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.update_bonus_count">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">update_bonus_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.update_bonus_count" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для работы с бонусами
+:param user_id:
+:param code:
+:param order_amount:
+:param request_type:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.update_date_of_birth">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">update_date_of_birth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_of_birth</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.update_date_of_birth" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для добавления даты рождения в бд
+:param user_id:
+:param date_of_birth:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.update_fullname">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">update_fullname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fullname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.update_fullname" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для добавления ФИО в бд
+:param user_id:
+:param fullname:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.update_last_user_code">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">update_last_user_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.update_last_user_code" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для обновления кода пользователя в таблице официантов
+:param user_id:
+:param code:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.update_phone_number">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">update_phone_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phone_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.update_phone_number" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для добавления номера телефона в бд
+:param user_id:
+:param phone_number:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db.update_register_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">update_register_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.update_register_user" title="Link to this definition">¶</a></dt>
+<dd><p>Функция для сохранения всех зарегистрированных пользователей
+:param user_id:
+:param code:
+:return:</p>
+</dd></dl>
+
+</section>
+<section id="module-main">
+<span id="main-py"></span><h1>Сам бот (main.py)<a class="headerlink" href="#module-main" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="main.Admin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">Admin</span></span><a class="headerlink" href="#main.Admin" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">StatesGroup</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Admin.add_admin">
+<span class="sig-name descname"><span class="pre">add_admin</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Admin:add_admin'&gt;</span></em><a class="headerlink" href="#main.Admin.add_admin" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Admin.add_waiter">
+<span class="sig-name descname"><span class="pre">add_waiter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Admin:add_waiter'&gt;</span></em><a class="headerlink" href="#main.Admin.add_waiter" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Admin.password">
+<span class="sig-name descname"><span class="pre">password</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Admin:password'&gt;</span></em><a class="headerlink" href="#main.Admin.password" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="main.MenuStates">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">MenuStates</span></span><a class="headerlink" href="#main.MenuStates" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">StatesGroup</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.MenuStates.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'MenuStates:code'&gt;</span></em><a class="headerlink" href="#main.MenuStates.code" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.MenuStates.contacts">
+<span class="sig-name descname"><span class="pre">contacts</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'MenuStates:contacts'&gt;</span></em><a class="headerlink" href="#main.MenuStates.contacts" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.MenuStates.show_menu">
+<span class="sig-name descname"><span class="pre">show_menu</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'MenuStates:show_menu'&gt;</span></em><a class="headerlink" href="#main.MenuStates.show_menu" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.MenuStates.start">
+<span class="sig-name descname"><span class="pre">start</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'MenuStates:start'&gt;</span></em><a class="headerlink" href="#main.MenuStates.start" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="main.Register">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">Register</span></span><a class="headerlink" href="#main.Register" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">StatesGroup</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Register.date_of_birth">
+<span class="sig-name descname"><span class="pre">date_of_birth</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Register:date_of_birth'&gt;</span></em><a class="headerlink" href="#main.Register.date_of_birth" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Register.fullname">
+<span class="sig-name descname"><span class="pre">fullname</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Register:fullname'&gt;</span></em><a class="headerlink" href="#main.Register.fullname" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Register.phone_number">
+<span class="sig-name descname"><span class="pre">phone_number</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Register:phone_number'&gt;</span></em><a class="headerlink" href="#main.Register.phone_number" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="main.Waiter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">Waiter</span></span><a class="headerlink" href="#main.Waiter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">StatesGroup</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Waiter.enter_code_for_minus">
+<span class="sig-name descname"><span class="pre">enter_code_for_minus</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Waiter:enter_code_for_minus'&gt;</span></em><a class="headerlink" href="#main.Waiter.enter_code_for_minus" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Waiter.enter_code_for_plus">
+<span class="sig-name descname"><span class="pre">enter_code_for_plus</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Waiter:enter_code_for_plus'&gt;</span></em><a class="headerlink" href="#main.Waiter.enter_code_for_plus" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Waiter.minus_bonus">
+<span class="sig-name descname"><span class="pre">minus_bonus</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Waiter:minus_bonus'&gt;</span></em><a class="headerlink" href="#main.Waiter.minus_bonus" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Waiter.plus_bonus">
+<span class="sig-name descname"><span class="pre">plus_bonus</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Waiter:plus_bonus'&gt;</span></em><a class="headerlink" href="#main.Waiter.plus_bonus" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Waiter.register_user">
+<span class="sig-name descname"><span class="pre">register_user</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;State</span> <span class="pre">'Waiter:register_user'&gt;</span></em><a class="headerlink" href="#main.Waiter.register_user" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_add_waiter">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_add_waiter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_add_waiter" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_admin_command">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_admin_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_admin_command" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_admin_password">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_admin_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_admin_password" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_bonus_count_for_minus">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_bonus_count_for_minus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_bonus_count_for_minus" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_bonus_count_for_plus">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_bonus_count_for_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_bonus_count_for_plus" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_code_for_plus">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_code_for_plus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_code_for_plus" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_dob">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_dob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_dob" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_fullname">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_fullname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_fullname" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_phone_number">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_phone_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_phone_number" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_register_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_register_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_register_user" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.handle_start_command">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">handle_start_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.handle_start_command" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.send_menu_to_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">send_menu_to_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.send_menu_to_user" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">База данных (db.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#db.add_new_user"><code class="docutils literal notranslate"><span class="pre">add_new_user()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.add_new_user_bonuses"><code class="docutils literal notranslate"><span class="pre">add_new_user_bonuses()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.add_new_user_forms"><code class="docutils literal notranslate"><span class="pre">add_new_user_forms()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.add_new_user_to_personal"><code class="docutils literal notranslate"><span class="pre">add_new_user_to_personal()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.add_operation_to_bonus_history"><code class="docutils literal notranslate"><span class="pre">add_operation_to_bonus_history()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.add_personal_code"><code class="docutils literal notranslate"><span class="pre">add_personal_code()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.add_user_to_waiter_table"><code class="docutils literal notranslate"><span class="pre">add_user_to_waiter_table()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.check_user"><code class="docutils literal notranslate"><span class="pre">check_user()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.check_user_in_personal_table"><code class="docutils literal notranslate"><span class="pre">check_user_in_personal_table()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.check_username_in_users"><code class="docutils literal notranslate"><span class="pre">check_username_in_users()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.get_all_about_waiters"><code class="docutils literal notranslate"><span class="pre">get_all_about_waiters()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.get_all_bonus_history"><code class="docutils literal notranslate"><span class="pre">get_all_bonus_history()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.get_last_user_code"><code class="docutils literal notranslate"><span class="pre">get_last_user_code()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.get_stats"><code class="docutils literal notranslate"><span class="pre">get_stats()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.get_user_balance"><code class="docutils literal notranslate"><span class="pre">get_user_balance()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.get_username_by_db_id"><code class="docutils literal notranslate"><span class="pre">get_username_by_db_id()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.update_bonus_count"><code class="docutils literal notranslate"><span class="pre">update_bonus_count()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.update_date_of_birth"><code class="docutils literal notranslate"><span class="pre">update_date_of_birth()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.update_fullname"><code class="docutils literal notranslate"><span class="pre">update_fullname()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.update_last_user_code"><code class="docutils literal notranslate"><span class="pre">update_last_user_code()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.update_phone_number"><code class="docutils literal notranslate"><span class="pre">update_phone_number()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db.update_register_user"><code class="docutils literal notranslate"><span class="pre">update_register_user()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-main">Сам бот (main.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main.Admin"><code class="docutils literal notranslate"><span class="pre">Admin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.MenuStates"><code class="docutils literal notranslate"><span class="pre">MenuStates</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.Register"><code class="docutils literal notranslate"><span class="pre">Register</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.Waiter"><code class="docutils literal notranslate"><span class="pre">Waiter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_add_waiter"><code class="docutils literal notranslate"><span class="pre">handle_add_waiter()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_admin_command"><code class="docutils literal notranslate"><span class="pre">handle_admin_command()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_admin_password"><code class="docutils literal notranslate"><span class="pre">handle_admin_password()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_bonus_count_for_minus"><code class="docutils literal notranslate"><span class="pre">handle_bonus_count_for_minus()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_bonus_count_for_plus"><code class="docutils literal notranslate"><span class="pre">handle_bonus_count_for_plus()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_code_for_plus"><code class="docutils literal notranslate"><span class="pre">handle_code_for_plus()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_dob"><code class="docutils literal notranslate"><span class="pre">handle_dob()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_fullname"><code class="docutils literal notranslate"><span class="pre">handle_fullname()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_phone_number"><code class="docutils literal notranslate"><span class="pre">handle_phone_number()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_register_user"><code class="docutils literal notranslate"><span class="pre">handle_register_user()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.handle_start_command"><code class="docutils literal notranslate"><span class="pre">handle_start_command()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main.send_menu_to_user"><code class="docutils literal notranslate"><span class="pre">send_menu_to_user()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Документация телеграмм бота для ресторана</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/module.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
